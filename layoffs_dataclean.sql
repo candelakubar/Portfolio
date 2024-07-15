@@ -7,6 +7,7 @@ WHERE 1 = 1;
 
 
 
+
 SELECT *,
        ROW_NUMBER() OVER (PARTITION BY company, industry, total_laid_off, percentage_laid_off,'date', stage, country, funds_raised_millions ORDER BY (SELECT NULL) )
 	   AS row_num
@@ -55,22 +56,22 @@ SELECT DISTINCT location FROM dataclean_staging
 ORDER BY location 
 
 UPDATE dataclean_staging
-SET location= 'D�sseldorf'
-WHERE location= 'Düsseldorf'
+SET location= 'Düsseldorf'
+WHERE location= 'DÃ¼sseldorf'
 
 
 UPDATE dataclean_staging
-SET location= 'D�sseldorf'
+SET location= 'Düsseldorf'
 WHERE location= 'Dusseldorf'
 
 UPDATE dataclean_staging
 SET location= 'Florianapolis'
-WHERE location= 'Florianópolis'
+WHERE location= 'FlorianÃ³polis'
 
 
 UPDATE dataclean_staging
 SET location= 'Malmo'
-WHERE location= 'Malmö'
+WHERE location= 'MalmÃ¶'
 
 SELECT DISTINCT country FROM dataclean_staging
 ORDER BY country
